@@ -24,16 +24,13 @@ run command git clone
  
 Go in the backend directory and run `npm install`
 
-## Step: 3 Prisma migrations (Optional, as they already be there) ##
+## Step: 3 Prisma migrations run ##
  
-I'm expecting if we are using same url for database as mentiond in application .env then we don't need to run prisma migrations, since I already run it.
+Run prisma migrations
 
-but it can be acheivable through `npx prisma migrate dev --name shortUrlMigrations` 
-`shortUrlMigrations`  ---> you can add any name to migration
+run `npx prisma migrate dev` 
 
-
-## Step:4 Prisma Studio ##
-
+# Prisma Studio #
 run `npx prisma studio` this will gives us the prisma UI for our database tables
 
 ## Step: 5 Run Project ##
@@ -121,10 +118,10 @@ mutation createShortUrl($input: CreateShortUrlInput!) {
 
 in above output `fullUrl` is redirect url, when we paste this url on browser it will take us to original url
 
+
 ## Run Test ##
 
 run `npm run test`
-
 
 
 ### GraphQL Schema ####
