@@ -76,6 +76,11 @@ mutation createShortUrl($input: CreateShortUrlInput!) {
   }
 }
 
+![image](https://github.com/imsimransingh/short-url-app/assets/95456903/e5ee0824-a17c-47c6-a84b-169a119f446b)
+
+
+
+
 ## Fetch all short links along with redirect links ##
 
 ## Request
