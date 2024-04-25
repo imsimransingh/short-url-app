@@ -1,9 +1,10 @@
-services:
-  db:
-    image: postgres:latest
-    ports:
-      - '5432:5432'
-    environment: 
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=123
-      - POSTGRES_DBR=nestjs
+# This is not in use since we are using hosted postgre
+# services:
+#  db:
+#    image: postgres:latest
+#    ports:
+#      - '5432:5432'
+#    environment: 
+#      - POSTGRES_USER=root
+#      - POSTGRES_PASSWORD=123
+#      - POSTGRES_DBR=nestjs
