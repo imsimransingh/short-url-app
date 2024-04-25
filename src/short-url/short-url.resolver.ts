@@ -34,9 +34,9 @@ export class ShortUrlResolver {
 
   // Mutation resolver to update a short URL
   @Mutation(() => ShortUrl)
-  updateShortUrl(@Args('updateShortUrlInput') updateShortUrlInput: UpdateShortUrlInput) {
+  async updateShortUrl(@Args('updateShortUrlInput') updateShortUrlInput: UpdateShortUrlInput) {
     // Call the update method of the ShortUrlService to update a short URL
-    return this.shortUrlService.update(updateShortUrlInput.id, updateShortUrlInput);
+    return await this.shortUrlService.update(updateShortUrlInput.id, updateShortUrlInput);
   }
 
   // Mutation resolver to remove a short URL by ID
