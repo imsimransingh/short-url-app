@@ -239,3 +239,5 @@ run `npm run test`
 #### Resolver
 
 The `ShortUrlResolver` class in NestJS handles the GraphQL operations. It uses the `ShortUrlService` for business logic and data handling.
+
+#### Please reach out to me if something is not documented/cleared/working @ singh.simran6065@gmail.com or +61 (0) 470 294 174 ####
