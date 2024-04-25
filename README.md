@@ -33,6 +33,10 @@ run `npx prisma migrate dev`
 # Prisma Studio #
 run `npx prisma studio` this will gives us the prisma UI for our database tables
 
+![image](https://github.com/imsimransingh/short-url-app/assets/95456903/98062195-bbbe-4936-a396-0be18160f145)
+
+
+
 ## Step: 5 Run Project ##
  
 run `npm run start:dev` this will run our nest server, after success you will be able to access
@@ -76,6 +80,11 @@ mutation createShortUrl($input: CreateShortUrlInput!) {
   }
 }
 
+![image](https://github.com/imsimransingh/short-url-app/assets/95456903/e5ee0824-a17c-47c6-a84b-169a119f446b)
+
+
+
+
 ## Fetch all short links along with redirect links ##
 
 ## Request
@@ -113,6 +122,62 @@ mutation createShortUrl($input: CreateShortUrlInput!) {
     ]
   }
 }
+
+![image](https://github.com/imsimransingh/short-url-app/assets/95456903/c89542da-d682-4078-a268-e0e8b479face)
+
+### Find one url by ID ###
+
+# Request
+query fetchById($input: Int!) {
+  shortUrl(id:$input) {
+    id
+    shortUrl
+    fullUrl
+  }
+}
+# Query Vars
+{"input":1}
+
+# Expected Output4
+
+{
+  "data": {
+    "shortUrl": {
+      "id": 1,
+      "shortUrl": "Zv2lbn5o",
+      "fullUrl": "https://nestjsssd22.com"
+    }
+  }
+}
+
+### Update Url by ID ###
+
+# Request
+mutation updateShortUrl($input: UpdateShortUrlInput!) {
+  updateShortUrl(updateShortUrlInput: $input){
+    id
+    shortUrl
+    fullUrl
+  }
+}
+# Example Query Vars
+{
+  "input": {"id":1, "fullUrl": "https://www.facebook.com"} 
+}
+
+# Expected Output
+{
+  "data": {
+    "updateShortUrl": {
+      "id": 1,
+      "shortUrl": "Zv2lbn5o",
+      "fullUrl": "https://www.facebook.com"
+    }
+  }
+}
+
+![image](https://github.com/imsimransingh/short-url-app/assets/95456903/30eae183-6730-4703-9da4-4662a5420367)
+
 
 #### NOTE ####
 
@@ -170,8 +235,6 @@ run `npm run test`
 - removeShortUrl
   - Deletes a short URL by its ID.
   - Parameters: `id` (Int).
-
-### Code Examples
 
 #### Resolver
 
