@@ -18,11 +18,11 @@ We can use Docker as well but for simplycity(i.e. to run directly on local), I h
 
 ## Step:1  Clone project  ##
 
-run command git clone 
+run command git clone https://github.com/imsimransingh/short-url-app.git
 
 ## Step: 2 npm install ##
  
-Go in the backend directory and run `npm install`
+ run `npm install`
 
 ## Step: 3 Prisma migrations run ##
  
