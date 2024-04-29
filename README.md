@@ -65,7 +65,7 @@ mutation createShortUrl($input: CreateShortUrlInput!) {
 # Input Vars (i.e Query Variables) #
 
 {
-  "input": { "fullUrl": "https://nestjsssd22.com"} 
+  "input": { "fullUrl": "https://nestjs.com"} 
 }
 
 # Expected Output Example #
